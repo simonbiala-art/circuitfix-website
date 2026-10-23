@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CircuitFix — Console &amp; Controller Repair</title>
+  <meta name="description" content="Specialist repair shop for PlayStation, Xbox, Nintendo Switch and controllers. Free diagnostics, honest quotes, 90-day warranty.">
+  <meta name="theme-color" content="#06080c">
+  <script>document.documentElement.classList.add("js");</script>
+  <meta property="og:title" content="CircuitFix — Console &amp; Controller Repair">
+  <meta property="og:description" content="From stick drift to HDMI ports — we bring your console back to life. Free diagnostics and a 90-day warranty.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="assets/mark.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "CircuitFix",
+    "description": "Console and controller repair specialists.",
+    "telephone": "+15550123456",
+    "email": "hello@circuitfix.example",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Unit 4, 128 High Street",
+      "addressLocality": "Your Town"
+    },
+    "openingHours": ["Mo-Fr 09:00-18:00", "Sa 10:00-16:00"],
+    "priceRange": "$$"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-controller" viewBox="0 0 24 24">
+      <path d="M8 8h8a4 4 0 0 1 3.9 3.1l.8 3.6A2.6 2.6 0 0 1 16 17l-1.6-2h-4.8L8 17a2.6 2.6 0 0 1-4.7-2.3l.8-3.6A4 4 0 0 1 8 8Z"/>
+      <path d="M8 11v3M6.5 12.5h3"/>
+      <path d="M16 11.5h.01M18 13.5h.01"/>
+    </symbol>
+    <symbol id="i-console" viewBox="0 0 24 24">
+      <rect x="3" y="6" width="18" height="12" rx="2.5"/>
+      <path d="M7 10h5M7 14h3M16.5 15h.01"/>
+      <path d="M15 9.5h3"/>
+    </symbol>
+    <symbol id="i-hdmi" viewBox="0 0 24 24">
+      <path d="M6.5 9.5h11L16 15H8L6.5 9.5Z"/>
+      <path d="M8.5 9.5V7.5h7v2"/>
+      <path d="M4 15.5h16"/>
+    </symbol>
+    <symbol id="i-disc" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="8.5"/>
+      <circle cx="12" cy="12" r="2.5"/>
+      <path d="M12 3.5a8.5 8.5 0 0 1 8.2 6.2"/>
+    </symbol>
+    <symbol id="i-fan" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="2"/>
+      <path d="M12 10c0-3.5 1-6 4-6 2 0 3 1.6 3 3.2 0 2.4-2.6 3.6-5.3 4M14 13c3 1.8 4.6 3.9 3 6.4-1 1.7-2.9 1.8-4.2.9-2-1.4-1.7-4-1.1-6.8M10.5 12.5C8.5 9.6 7 7.2 4.5 8c-1.8.6-2.4 2.4-1.8 3.8.9 2.2 3.6 2.5 6.5 2.6M11 14.5c-2 3-4.4 4.5-6.9 3-1.7-1-1.8-2.9-.9-4.2 1.4-2 4-1.7 6.8-1.1"/>
+    </symbol>
+    <symbol id="i-battery" viewBox="0 0 24 24">
+      <rect x="2.5" y="8" width="16" height="8" rx="2"/>
+      <path d="M21.5 11v2"/>
+      <path d="m11.5 9.5-2.5 3h3l-2.5 3"/>
+    </symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24">
+      <path d="M21 12a8.5 8.5 0 0 1-12.4 7.5L4 21l1.5-4.6A8.5 8.5 0 1 1 21 12Z"/>
+      <path d="M8.5 11.5h.01M12 11.5h.01M15.5 11.5h.01"/>
+    </symbol>
+    <symbol id="i-retro" viewBox="0 0 24 24">
+      <rect x="4" y="4" width="16" height="16" rx="3"/>
+      <path d="M8 9h4M8 13v4M13 9h3v3h-3z"/>
+      <path d="M14 16h3"/>
+    </symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24">
+      <path d="M12 3 19 6v5.3c0 4.6-2.9 7.7-7 9.7-4.1-2-7-5.1-7-9.7V6l7-3Z"/>
+      <path d="m9 11.8 2 2 4-4.2"/>
+    </symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="8.5"/>
+      <path d="M12 7.5V12l3 2"/>
+    </symbol>
+    <symbol id="i-check" viewBox="0 0 24 24">
+      <path d="m5 12.5 4.5 4.5L19 7"/>
+    </symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24">
+      <path d="M6.2 3.5h2.9l1.8 4.4-2 1.5a12.5 12.5 0 0 0 5.7 5.7l1.5-2 4.4 1.8v2.9a2.2 2.2 0 0 1-2.4 2.2A16.8 16.8 0 0 1 4 5.9a2.2 2.2 0 0 1 2.2-2.4Z"/>
+    </symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24">
+      <rect x="3" y="5.5" width="18" height="13" rx="2.5"/>
+      <path d="m4 7 8 6 8-6"/>
+    </symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24">
+      <path d="M12 21s7-5.8 7-11a7 7 0 1 0-14 0c0 5.2 7 11 7 11Z"/>
+      <circle cx="12" cy="10" r="2.6"/>
+    </symbol>
+    <symbol id="i-star" viewBox="0 0 24 24">
+      <path d="m12 2.8 2.9 6 6.6.9-4.8 4.6 1.2 6.6-5.9-3.2-5.9 3.2 1.2-6.6L2.5 9.7l6.6-.9 2.9-6Z"/>
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24">
+      <path d="M4 12h15M13 6l6 6-6 6"/>
+    </symbol>
+    <symbol id="i-wrench" viewBox="0 0 24 24">
+      <path d="M14.6 6.4a4.2 4.2 0 0 0 5 5.3l-9.4 9.4a2.3 2.3 0 0 1-3.3-3.3l9.4-9.4a4.2 4.2 0 0 1-1.7-2Z"/>
+    </symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24">
+      <path d="M4 7h16M4 12h16M4 17h16"/>
+    </symbol>
+    <symbol id="i-close" viewBox="0 0 24 24">
+      <path d="m6 6 12 12M18 6 6 18"/>
+    </symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24">
+      <path d="M12 5v14M5 12h14"/>
+    </symbol>
+  </svg>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="CircuitFix home">
+        <img src="assets/mark.svg" alt="" width="38" height="38">
+        <span class="brand-text">
+          <span class="brand-name">Circuit<span>Fix</span></span>
+          <span class="brand-sub">Electronics repair</span>
+        </span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Main navigation">
+        <a href="#services">Services</a>
+        <a href="#why">Why us</a>
+        <a href="#process">Process</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn btn-primary nav-cta" href="#contact">Book a repair</a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+        <svg class="icon"><use href="#i-menu"/></svg>
+        <svg class="icon icon-close"><use href="#i-close"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="bg-grid" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <a class="eyebrow" href="#contact"><span class="eyebrow-dot"></span> Free diagnostics · No fix, no fee</a>
+          <h1>Broken console?<br>We bring it <span class="accent">back to life.</span></h1>
+          <p class="lead">Specialist repairs for PlayStation, Xbox, Nintendo Switch and controllers — from stick drift to HDMI ports. Honest quotes, careful work, and a 90-day warranty.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Book a repair <svg class="icon"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn-ghost" href="tel:+15550123456"><svg class="icon"><use href="#i-phone"/></svg> Call the shop</a>
+          </div>
+          <ul class="trust">
+            <li><svg class="icon"><use href="#i-check"/></svg> Free diagnosis</li>
+            <li><svg class="icon"><use href="#i-check"/></svg> Same-day options</li>
+            <li><svg class="icon"><use href="#i-check"/></svg> 90-day warranty</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="visual-glow" aria-hidden="true"></div>
+
+          <article class="ticket">
+            <div class="ticket-head">
+              <div class="ticket-brand">
+                <img src="assets/mark.svg" alt="" width="26" height="26">
+                <span>Job #1042</span>
+              </div>
+              <span class="status"><span class="pulse"></span> In progress</span>
+            </div>
+
+            <div class="ticket-device">
+              <div class="device-icon"><svg class="icon"><use href="#i-console"/></svg></div>
+              <div class="device-meta">
+                <strong>PlayStation 5</strong>
+                <span>HDMI port replacement</span>
+              </div>
+              <span class="ticket-tag">Priority</span>
+            </div>
+
+            <div class="ticket-progress">
+              <div class="progress-label"><span>Repair progress</span><span>75%</span></div>
+              <div class="progress"><span></span></div>
+            </div>
+
+            <ol class="ticket-steps">
+              <li class="done"><span></span>Checked in</li>
+              <li class="done"><span></span>Diagnosed</li>
+              <li class="active"><span></span>Repairing</li>
+              <li><span></span>Testing</li>
+            </ol>
+
+            <div class="ticket-foot">
+              <div class="ticket-foot-item"><span>Est. pickup</span><strong>Tomorrow · 2:00 pm</strong></div>
+              <div class="ticket-badge"><svg class="icon"><use href="#i-shield"/></svg> Warranty</div>
+            </div>
+          </article>
+
+          <div class="float-card float-rating">
+            <div class="stars" aria-label="5 out of 5 stars">
+              <svg class="icon"><use href="#i-star"/></svg>
+              <svg class="icon"><use href="#i-star"/></svg>
+              <svg class="icon"><use href="#i-star"/></svg>
+              <svg class="icon"><use href="#i-star"/></svg>
+              <svg class="icon"><use href="#i-star"/></svg>
+            </div>
+            <span><strong>4.9</strong> · 300+ repairs</span>
+          </div>
+
+          <div class="float-card float-fixed">
+            <div class="float-icon"><svg class="icon"><use href="#i-check"/></svg></div>
+            <div><strong>Fixed in 48h</strong><span>Most controller jobs</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="brands" aria-label="Consoles and controllers we repair">
+      <div class="marquee">
+        <div class="marquee-track">
+          <span>PlayStation</span><i></i>
+          <span>Xbox</span><i></i>
+          <span>Nintendo Switch</span><i></i>
+          <span>Steam Deck</span><i></i>
+          <span>DualSense</span><i></i>
+          <span>Joy-Con</span><i></i>
+          <span>Game Boy</span><i></i>
+          <span>Retro consoles</span><i></i>
+          <span>PlayStation</span><i></i>
+          <span>Xbox</span><i></i>
+          <span>Nintendo Switch</span><i></i>
+          <span>Steam Deck</span><i></i>
+          <span>DualSense</span><i></i>
+          <span>Joy-Con</span><i></i>
+          <span>Game Boy</span><i></i>
+          <span>Retro consoles</span><i></i>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"><span class="eyebrow-dot"></span> What we fix</span>
+          <h2>Small shop. Serious repairs.</h2>
+          <p>Consoles, controllers and handhelds — brought back to full health with the right parts and proper testing.</p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card reveal">
+            <div class="card-icon"><svg class="icon"><use href="#i-console"/></svg></div>
+            <h3>Console repair</h3>
+            <p>No power, overheating, random shutdowns or crashes. PlayStation, Xbox and Switch, from diagnostics to board-level work.</p>
+            <div class="tags"><span>PS5</span><span>PS4</span><span>Xbox</span><span>Switch</span></div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-icon"><svg class="icon"><use href="#i-controller"/></svg></div>
+            <h3>Controller repair</h3>
+            <p>Stick drift, dead buttons, not charging or pairing. Most controllers are fixed same day while you wait.</p>
+            <div class="tags"><span>DualSense</span><span>Joy-Con</span><span>Elite</span></div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-icon"><svg class="icon"><use href="#i-hdmi"/></svg></div>
+            <h3>HDMI port replacement</h3>
+            <p>No signal, bent pins or a cracked port. Replaced in-house with proper micro-soldering and a full picture test.</p>
+            <div class="tags"><span>PS5</span><span>Xbox Series</span></div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-icon"><svg class="icon"><use href="#i-disc"/></svg></div>
+            <h3>Disc drive repair</h3>
+            <p>Discs not reading, jamming or grinding? We repair drives, swap lasers and test a range of game discs.</p>
+            <div class="tags"><span>PS4</span><span>PS5</span><span>Xbox</span></div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-icon"><svg class="icon"><use href="#i-fan"/></svg></div>
+            <h3>Cleaning &amp; thermal service</h3>
+            <p>Loud fans and hot consoles. A deep clean, fresh thermal paste and pads bring temperatures and noise back down.</p>
+            <div class="tags"><span>All consoles</span><span>Laptops</span></div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-icon"><svg class="icon"><use href="#i-retro"/></svg></div>
+            <h3>Retro &amp; handheld</h3>
+            <p>Game Boy, DS, 3DS, PSP and Vita. Battery swaps, screen replacements, shell changes and full restorations.</p>
+            <div class="tags"><span>Game Boy</span><span>DS</span><span>PSP</span></div>
+          </article>
+        </div>
+
+        <p class="services-note reveal">Something else playing up? Ask us — if we can't fix it, you don't pay. <a href="#contact">Send us a message <svg class="icon"><use href="#i-arrow"/></svg></a></p>
+      </div>
+    </section>
+
+    <section class="section why" id="why">
+      <div class="container why-grid">
+        <div class="why-copy reveal">
+          <span class="eyebrow"><span class="eyebrow-dot"></span> Why CircuitFix</span>
+          <h2>The difference is in the details.</h2>
+          <p>No shortcuts, no mystery fees. Just careful diagnostics and repairs that hold up long after you've taken the console home.</p>
+
+          <ul class="feature-list">
+            <li>
+              <span class="feature-icon"><svg class="icon"><use href="#i-shield"/></svg></span>
+              <div><strong>Quality parts that last</strong><p>Genuine or premium-grade components — never the cheapest option.</p></div>
+            </li>
+            <li>
+              <span class="feature-icon"><svg class="icon"><use href="#i-wrench"/></svg></span>
+              <div><strong>In-house micro-soldering</strong><p>HDMI and charging ports fixed here, not sent off to a third party.</p></div>
+            </li>
+            <li>
+              <span class="feature-icon"><svg class="icon"><use href="#i-chat"/></svg></span>
+              <div><strong>Prices agreed up front</strong><p>You approve the quote before we start. No surprises when you collect.</p></div>
+            </li>
+            <li>
+              <span class="feature-icon"><svg class="icon"><use href="#i-clock"/></svg></span>
+              <div><strong>Fast, honest turnaround</strong><p>Most jobs are done in 24–48 hours, and we'll tell you if it's not worth fixing.</p></div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="stats reveal">
+          <div class="stat">
+            <strong>2,000<span>+</span></strong>
+            <p>Devices repaired</p>
+          </div>
+          <div class="stat">
+            <strong>4.9<span>★</span></strong>
+            <p>Average review</p>
+          </div>
+          <div class="stat">
+            <strong>48<span>h</span></strong>
+            <p>Typical turnaround</p>
+          </div>
+          <div class="stat">
+            <strong>90<span>d</span></strong>
+            <p>Repair warranty</p>
+          </div>
+          <div class="stats-note"><svg class="icon"><use href="#i-check"/></svg> Every repair is tested before it leaves the bench.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process" id="process">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="eyebrow"><span class="eyebrow-dot"></span> How it works</span>
+          <h2>From broken to playing in four steps.</h2>
+        </div>
+
+        <ol class="steps">
+          <li class="reveal">
+            <span class="step-num">01</span>
+            <h3>Tell us what's wrong</h3>
+            <p>Send a message or drop in with your device. A quick description is all we need to get started.</p>
+          </li>
+          <li class="reveal">
+            <span class="step-num">02</span>
+            <h3>Free diagnosis</h3>
+            <p>We test the device and explain the fault in plain English — no jargon, no pressure.</p>
+          </li>
+          <li class="reveal">
+            <span class="step-num">03</span>
+            <h3>You approve the quote</h3>
+            <p>Nothing happens until you're happy with the price and the plan. Decline and you owe nothing.</p>
+          </li>
+          <li class="reveal">
+            <span class="step-num">04</span>
+            <h3>Repair, test, collect</h3>
+            <p>We fix it, test it hard, and message you when it's ready with your 90-day warranty.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section reviews" id="reviews">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"><span class="eyebrow-dot"></span> Word of mouth</span>
+          <h2>Trusted by local gamers.</h2>
+          <p>Most of our work comes from people telling their friends. Here's a taste of what they say.</p>
+        </div>
+
+        <div class="review-grid">
+          <figure class="review reveal">
+            <div class="review-stars" aria-label="5 out of 5 stars">
+              <svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg>
+            </div>
+            <blockquote>"My PS5 was overheating and shutting down mid-game. Fixed in two days and it's whisper quiet now. Proper job."</blockquote>
+            <figcaption><span class="avatar">MT</span><div><strong>Marcus T.</strong><span>PS5 thermal repair</span></div></figcaption>
+          </figure>
+
+          <figure class="review reveal">
+            <div class="review-stars" aria-label="5 out of 5 stars">
+              <svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg>
+            </div>
+            <blockquote>"Both my Joy-Cons had drift. They replaced the sticks while I waited and even cleaned them up. Feels brand new."</blockquote>
+            <figcaption><span class="avatar">PS</span><div><strong>Priya S.</strong><span>Joy-Con repair</span></div></figcaption>
+          </figure>
+
+          <figure class="review reveal">
+            <div class="review-stars" aria-label="5 out of 5 stars">
+              <svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg>
+            </div>
+            <blockquote>"Thought my old Game Boy was beyond saving. They restored it beautifully and kept me updated the whole time."</blockquote>
+            <figcaption><span class="avatar">DR</span><div><strong>Daniel R.</strong><span>Game Boy restoration</span></div></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq" id="faq">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="eyebrow"><span class="eyebrow-dot"></span> Good to know</span>
+          <h2>Questions, answered.</h2>
+        </div>
+
+        <div class="faq-list reveal">
+          <details>
+            <summary>How long does a repair take?<span class="faq-icon"><svg class="icon"><use href="#i-plus"/></svg></span></summary>
+            <p>Most controller repairs are same day, and most console repairs are ready within 24–48 hours. If we need to order a specific part, we'll give you a clear timeframe before you commit.</p>
+          </details>
+          <details>
+            <summary>Do you charge for diagnostics?<span class="faq-icon"><svg class="icon"><use href="#i-plus"/></svg></span></summary>
+            <p>No. Diagnosis is free, and there's no obligation to go ahead. If we can't fix it, you don't pay anything.</p>
+          </details>
+          <details>
+            <summary>Do you use genuine parts?<span class="faq-icon"><svg class="icon"><use href="#i-plus"/></svg></span></summary>
+            <p>We use genuine parts wherever they're available, and premium-grade alternatives when they're not. Either way, we'll tell you exactly what's going into your device.</p>
+          </details>
+          <details>
+            <summary>What if my console can't be fixed?<span class="faq-icon"><svg class="icon"><use href="#i-plus"/></svg></span></summary>
+            <p>We'll tell you honestly before doing any work. If it's not economically sensible to repair, we'll say so — and you'll only ever pay for work you've approved.</p>
+          </details>
+          <details>
+            <summary>Do you offer a warranty?<span class="faq-icon"><svg class="icon"><use href="#i-plus"/></svg></span></summary>
+            <p>Yes — every repair comes with a 90-day warranty covering the parts we fitted and the work we carried out. Keep your receipt and we'll sort any issue quickly.</p>
+          </details>
+          <details>
+            <summary>Can you fix water-damaged consoles?<span class="faq-icon"><svg class="icon"><use href="#i-plus"/></svg></span></summary>
+            <p>Often, yes. Don't switch it on — bring it in as soon as possible. The sooner we can clean and treat the board, the better the chances of a full recovery.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-copy reveal">
+          <span class="eyebrow"><span class="eyebrow-dot"></span> Book a repair</span>
+          <h2>Tell us what's playing up.</h2>
+          <p>Send a few details and we'll come back with next steps and a rough quote. You can also call or drop in during opening hours.</p>
+
+          <div class="contact-lines">
+            <a href="tel:+15550123456">
+              <span class="contact-icon"><svg class="icon"><use href="#i-phone"/></svg></span>
+              <div><span>Call us</span><strong>+1 (555) 012-3456</strong></div>
+            </a>
+            <a href="mailto:hello@circuitfix.example">
+              <span class="contact-icon"><svg class="icon"><use href="#i-mail"/></svg></span>
+              <div><span>Email</span><strong>hello@circuitfix.example</strong></div>
+            </a>
+            <a href="https://maps.google.com/?q=Unit+4,+128+High+Street,+Your+Town" target="_blank" rel="noopener">
+              <span class="contact-icon"><svg class="icon"><use href="#i-pin"/></svg></span>
+              <div><span>Visit the shop</span><strong>Unit 4, 128 High Street, Your Town</strong></div>
+            </a>
+          </div>
+
+          <div class="hours">
+            <div class="hours-head"><svg class="icon"><use href="#i-clock"/></svg> Opening hours</div>
+            <dl>
+              <div><dt>Monday – Friday</dt><dd>9:00 am – 6:00 pm</dd></div>
+              <div><dt>Saturday</dt><dd>10:00 am – 4:00 pm</dd></div>
+              <div><dt>Sunday</dt><dd>Closed</dd></div>
+            </dl>
+          </div>
+        </div>
+
+        <form class="repair-form reveal" id="repairForm" novalidate>
+          <div class="form-head">
+            <h3>Repair request</h3>
+            <span class="form-badge"><span class="pulse"></span> Free diagnosis</span>
+          </div>
+
+          <div class="form-row">
+            <label>
+              <span>Your name</span>
+              <input type="text" name="name" id="name" placeholder="Alex Smith" autocomplete="name" required>
+            </label>
+            <label>
+              <span>Phone or email</span>
+              <input type="text" name="contact" id="contactInfo" placeholder="How should we reply?" autocomplete="tel" required>
+            </label>
+          </div>
+
+          <label>
+            <span>Device</span>
+            <div class="select-wrap">
+              <select name="device" id="device" required>
+                <option value="" selected disabled>Choose your device</option>
+                <option>PlayStation 5</option>
+                <option>PlayStation 4</option>
+                <option>Xbox Series X / S</option>
+                <option>Xbox One</option>
+                <option>Nintendo Switch</option>
+                <option>Controller</option>
+                <option>Retro console</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </label>
+
+          <label>
+            <span>What's the problem?</span>
+            <textarea name="message" id="message" rows="4" placeholder="e.g. PS5 turns on for 10 minutes then shuts down with a loud fan." required></textarea>
+          </label>
+
+          <button class="btn btn-primary btn-block" type="submit">
+            Send via WhatsApp <svg class="icon"><use href="#i-arrow"/></svg>
+          </button>
+
+          <p class="form-note">This opens WhatsApp with your details filled in. We only use them to reply about your repair.</p>
+          <p class="form-error" id="formError" role="alert" hidden>Please fill in your name, contact details and a short description.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="#top" aria-label="CircuitFix home">
+            <img src="assets/mark.svg" alt="" width="38" height="38">
+            <span class="brand-text">
+              <span class="brand-name">Circuit<span>Fix</span></span>
+              <span class="brand-sub">Electronics repair</span>
+            </span>
+          </a>
+          <p>Console and controller repair specialists. Honest diagnostics, careful work, and a 90-day warranty on every repair.</p>
+          <div class="footer-badges">
+            <span><svg class="icon"><use href="#i-shield"/></svg> 90-day warranty</span>
+            <span><svg class="icon"><use href="#i-check"/></svg> No fix, no fee</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Repairs</h4>
+          <a href="#services">Console repair</a>
+          <a href="#services">Controller repair</a>
+          <a href="#services">HDMI ports</a>
+          <a href="#services">Cleaning &amp; thermal</a>
+          <a href="#services">Retro &amp; handheld</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <a href="#why">Why us</a>
+          <a href="#process">How it works</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Book a repair</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="tel:+15550123456">+1 (555) 012-3456</a>
+          <a href="mailto:hello@circuitfix.example">hello@circuitfix.example</a>
+          <a href="https://maps.google.com/?q=Unit+4,+128+High+Street,+Your+Town" target="_blank" rel="noopener">Unit 4, 128 High Street<br>Your Town</a>
+          <span class="footer-hours">Mon–Fri 9–6 · Sat 10–4</span>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> CircuitFix. All rights reserved.</span>
+        <span>Independent repair shop · Not affiliated with Sony, Microsoft or Nintendo.</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="mobile-cta">
+    <a class="btn btn-ghost" href="tel:+15550123456"><svg class="icon"><use href="#i-phone"/></svg> Call</a>
+    <a class="btn btn-primary" href="#contact">Book a repair</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
