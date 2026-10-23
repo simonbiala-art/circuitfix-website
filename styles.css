@@ -1,13 +1,13 @@
 :root {
-  --bg: #06080c;
-  --bg-soft: #0a0e13;
-  --text: #eef4ee;
-  --muted: #98a49d;
+  --bg: #090607;
+  --bg-soft: #100a0b;
+  --text: #f7f0e4;
+  --muted: #a89c94;
   --line: rgba(255, 255, 255, 0.09);
   --line-strong: rgba(255, 255, 255, 0.16);
-  --accent: #a8ff4f;
-  --accent-2: #33e6b5;
-  --accent-3: #2ad4ff;
+  --accent: #ff4d4d;
+  --accent-2: #ff8a3c;
+  --accent-3: #a6d65e;
   --warn: #ffd24a;
   --radius: 20px;
   --container: 1180px;
@@ -44,9 +44,9 @@ body::before {
   z-index: -1;
   pointer-events: none;
   background:
-    radial-gradient(900px 620px at 10% -12%, rgba(168, 255, 79, 0.1), transparent 62%),
-    radial-gradient(820px 520px at 96% -2%, rgba(42, 212, 255, 0.08), transparent 62%),
-    radial-gradient(760px 700px at 50% 112%, rgba(51, 230, 181, 0.06), transparent 62%);
+    radial-gradient(900px 620px at 10% -12%, rgba(255, 77, 77, 0.1), transparent 62%),
+    radial-gradient(820px 520px at 96% -2%, rgba(255, 107, 60, 0.08), transparent 62%),
+    radial-gradient(760px 700px at 50% 112%, rgba(166, 214, 94, 0.05), transparent 62%);
 }
 
 img {
@@ -91,7 +91,7 @@ textarea {
 
 ::selection {
   background: var(--accent);
-  color: #04120a;
+  color: #fff6ea;
 }
 
 :focus-visible {
@@ -125,7 +125,7 @@ textarea {
   padding: 10px 16px;
   border-radius: 10px;
   background: var(--accent);
-  color: #04120a;
+  color: #fff6ea;
   font-weight: 600;
   transform: translateY(-160%);
   transition: transform 0.2s;
@@ -152,9 +152,9 @@ textarea {
   align-items: center;
   gap: 10px;
   padding: 7px 14px;
-  border: 1px solid rgba(168, 255, 79, 0.18);
+  border: 1px solid rgba(255, 77, 77, 0.18);
   border-radius: 999px;
-  background: rgba(168, 255, 79, 0.06);
+  background: rgba(255, 77, 77, 0.06);
   color: var(--accent);
   font-size: 11px;
   font-weight: 600;
@@ -167,7 +167,7 @@ textarea {
   height: 6px;
   border-radius: 50%;
   background: var(--accent);
-  box-shadow: 0 0 12px rgba(168, 255, 79, 0.9);
+  box-shadow: 0 0 12px rgba(255, 77, 77, 0.9);
 }
 
 .section-head {
@@ -222,13 +222,13 @@ textarea {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #c6ff66, #2fe8b6);
-  color: #041309;
-  box-shadow: 0 10px 30px rgba(110, 255, 140, 0.22);
+  background: linear-gradient(135deg, #e8333f, #b51225);
+  color: #fff6ea;
+  box-shadow: 0 10px 30px rgba(255, 70, 60, 0.22);
 }
 
 .btn-primary:hover {
-  box-shadow: 0 14px 38px rgba(110, 255, 140, 0.32);
+  box-shadow: 0 14px 38px rgba(255, 70, 60, 0.32);
 }
 
 .btn-primary:hover .icon {
@@ -258,14 +258,14 @@ textarea {
   top: 0;
   z-index: 50;
   border-bottom: 1px solid transparent;
-  background: rgba(6, 8, 12, 0.7);
+  background: rgba(9, 6, 7, 0.7);
   backdrop-filter: blur(16px);
   transition: border-color 0.3s, background 0.3s, box-shadow 0.3s;
 }
 
 .site-header.scrolled {
   border-color: var(--line);
-  background: rgba(6, 8, 12, 0.88);
+  background: rgba(9, 6, 7, 0.88);
   box-shadow: 0 18px 40px -24px rgba(0, 0, 0, 0.9);
 }
 
@@ -286,7 +286,7 @@ textarea {
 
 .brand img {
   border-radius: 11px;
-  box-shadow: 0 6px 18px rgba(168, 255, 79, 0.18);
+  box-shadow: 0 6px 18px rgba(255, 77, 77, 0.18);
 }
 
 .brand-text {
@@ -323,7 +323,7 @@ textarea {
 
 .nav > a:not(.btn) {
   position: relative;
-  color: #c2cdc6;
+  color: #d6ccc2;
   font-size: 0.9rem;
   font-weight: 500;
   transition: color 0.2s;
@@ -414,7 +414,7 @@ textarea {
 }
 
 .accent {
-  background: linear-gradient(115deg, #c8ff70, #3ae8bb 55%, #35d7ff);
+  background: linear-gradient(115deg, #ffe6c4, #ff8a5a 55%, #ff2f3f);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -445,7 +445,7 @@ textarea {
   display: flex;
   align-items: center;
   gap: 8px;
-  color: #adb9b1;
+  color: #b9aca2;
   font-size: 0.83rem;
   font-weight: 500;
 }
@@ -453,7 +453,7 @@ textarea {
 .trust .icon {
   width: 15px;
   height: 15px;
-  color: var(--accent);
+  color: var(--accent-3);
 }
 
 .hero-visual {
@@ -468,7 +468,7 @@ textarea {
   width: 460px;
   height: 460px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(120, 255, 120, 0.26), rgba(42, 212, 255, 0.08) 45%, transparent 68%);
+  background: radial-gradient(circle, rgba(255, 70, 60, 0.26), rgba(255, 107, 60, 0.08) 45%, transparent 68%);
   filter: blur(30px);
   animation: drift 9s ease-in-out infinite;
 }
@@ -484,9 +484,9 @@ textarea {
   z-index: 2;
   width: min(100%, 432px);
   padding: 24px;
-  border: 1px solid rgba(168, 255, 79, 0.16);
+  border: 1px solid rgba(255, 77, 77, 0.16);
   border-radius: 24px;
-  background: linear-gradient(165deg, rgba(24, 32, 27, 0.94), rgba(9, 13, 11, 0.97));
+  background: linear-gradient(165deg, rgba(32, 19, 20, 0.94), rgba(16, 9, 10, 0.97));
   box-shadow: 0 46px 90px -28px rgba(0, 0, 0, 0.95), inset 0 1px 0 rgba(255, 255, 255, 0.06);
   transform: rotate(-1.4deg);
   transition: transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1);
@@ -499,7 +499,7 @@ textarea {
   left: 18%;
   right: 18%;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(168, 255, 79, 0.7), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 77, 77, 0.7), transparent);
 }
 
 .ticket:hover {
@@ -532,7 +532,7 @@ textarea {
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  color: var(--accent);
+  color: var(--accent-3);
   font-size: 10.5px;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -544,19 +544,19 @@ textarea {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: var(--accent);
+  background: var(--accent-3);
   animation: pulse 2.2s ease-out infinite;
 }
 
 @keyframes pulse {
   0% {
-    box-shadow: 0 0 0 0 rgba(168, 255, 79, 0.55);
+    box-shadow: 0 0 0 0 rgba(166, 214, 94, 0.55);
   }
   70% {
-    box-shadow: 0 0 0 9px rgba(168, 255, 79, 0);
+    box-shadow: 0 0 0 9px rgba(166, 214, 94, 0);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(168, 255, 79, 0);
+    box-shadow: 0 0 0 0 rgba(166, 214, 94, 0);
   }
 }
 
@@ -576,9 +576,9 @@ textarea {
   place-items: center;
   width: 44px;
   height: 44px;
-  border: 1px solid rgba(168, 255, 79, 0.18);
+  border: 1px solid rgba(255, 77, 77, 0.18);
   border-radius: 12px;
-  background: linear-gradient(135deg, rgba(168, 255, 79, 0.14), rgba(51, 230, 181, 0.07));
+  background: linear-gradient(135deg, rgba(255, 77, 77, 0.14), rgba(255, 138, 60, 0.07));
   color: var(--accent);
 }
 
@@ -647,8 +647,8 @@ textarea {
   width: 75%;
   height: 100%;
   border-radius: 999px;
-  background: linear-gradient(90deg, #a8ff4f, #33e6b5);
-  box-shadow: 0 0 16px rgba(168, 255, 79, 0.45);
+  background: linear-gradient(90deg, #ff4d4d, #ff8a3c);
+  box-shadow: 0 0 16px rgba(255, 77, 77, 0.45);
   overflow: hidden;
 }
 
@@ -678,7 +678,7 @@ textarea {
 .ticket-steps li {
   position: relative;
   padding-top: 20px;
-  color: #7d8a82;
+  color: #8a7d74;
   font-size: 9.5px;
   font-weight: 600;
   letter-spacing: 0.06em;
@@ -711,18 +711,18 @@ textarea {
 }
 
 .ticket-steps li.done {
-  color: #b9c6be;
+  color: #c9beb3;
 }
 
 .ticket-steps li.done span,
 .ticket-steps li.active span {
-  border-color: var(--accent);
-  background: var(--accent);
+  border-color: var(--accent-3);
+  background: var(--accent-3);
 }
 
 .ticket-steps li.done::before,
 .ticket-steps li.active::before {
-  background: rgba(168, 255, 79, 0.45);
+  background: rgba(166, 214, 94, 0.45);
 }
 
 .ticket-steps li.active {
@@ -730,7 +730,7 @@ textarea {
 }
 
 .ticket-steps li.active span {
-  box-shadow: 0 0 0 3px rgba(168, 255, 79, 0.18);
+  box-shadow: 0 0 0 3px rgba(166, 214, 94, 0.18);
 }
 
 .ticket-foot {
@@ -761,9 +761,9 @@ textarea {
   align-items: center;
   gap: 6px;
   padding: 7px 10px;
-  border: 1px solid rgba(168, 255, 79, 0.22);
+  border: 1px solid rgba(255, 77, 77, 0.22);
   border-radius: 999px;
-  background: rgba(168, 255, 79, 0.08);
+  background: rgba(255, 77, 77, 0.08);
   color: var(--accent);
   font-size: 10px;
   font-weight: 600;
@@ -847,8 +847,8 @@ textarea {
   width: 32px;
   height: 32px;
   border-radius: 10px;
-  background: linear-gradient(135deg, rgba(168, 255, 79, 0.9), rgba(51, 230, 181, 0.9));
-  color: #041309;
+  background: linear-gradient(135deg, rgba(255, 77, 77, 0.9), rgba(255, 138, 60, 0.9));
+  color: #fff6ea;
 }
 
 .float-icon .icon {
@@ -884,7 +884,7 @@ textarea {
 }
 
 .marquee-track span {
-  color: rgba(238, 244, 238, 0.42);
+  color: rgba(247, 240, 228, 0.42);
   font-family: var(--font-head);
   font-size: clamp(1rem, 1.7vw, 1.3rem);
   font-weight: 600;
@@ -936,7 +936,7 @@ textarea {
   width: 180px;
   height: 180px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(168, 255, 79, 0.14), transparent 70%);
+  background: radial-gradient(circle, rgba(255, 77, 77, 0.14), transparent 70%);
   opacity: 0;
   transition: opacity 0.35s;
   pointer-events: none;
@@ -944,7 +944,7 @@ textarea {
 
 .card:hover {
   transform: translateY(-4px);
-  border-color: rgba(168, 255, 79, 0.3);
+  border-color: rgba(255, 77, 77, 0.3);
   box-shadow: 0 26px 50px -26px rgba(0, 0, 0, 0.85);
 }
 
@@ -957,9 +957,9 @@ textarea {
   place-items: center;
   width: 46px;
   height: 46px;
-  border: 1px solid rgba(168, 255, 79, 0.2);
+  border: 1px solid rgba(255, 77, 77, 0.2);
   border-radius: 14px;
-  background: linear-gradient(135deg, rgba(168, 255, 79, 0.15), rgba(51, 230, 181, 0.06));
+  background: linear-gradient(135deg, rgba(255, 77, 77, 0.15), rgba(255, 138, 60, 0.06));
   color: var(--accent);
 }
 
@@ -992,7 +992,7 @@ textarea {
   border: 1px solid var(--line);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.04);
-  color: #b7c3bb;
+  color: #c9bdb2;
   font-size: 9.5px;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -1059,9 +1059,9 @@ textarea {
   flex: none;
   width: 42px;
   height: 42px;
-  border: 1px solid rgba(168, 255, 79, 0.16);
+  border: 1px solid rgba(255, 77, 77, 0.16);
   border-radius: 12px;
-  background: rgba(168, 255, 79, 0.07);
+  background: rgba(255, 77, 77, 0.07);
   color: var(--accent);
 }
 
@@ -1099,7 +1099,7 @@ textarea {
 
 .stat:hover {
   transform: translateY(-3px);
-  border-color: rgba(168, 255, 79, 0.26);
+  border-color: rgba(255, 77, 77, 0.26);
 }
 
 .stat strong {
@@ -1130,17 +1130,17 @@ textarea {
   align-items: center;
   gap: 8px;
   padding: 14px 18px;
-  border: 1px dashed rgba(168, 255, 79, 0.24);
+  border: 1px dashed rgba(166, 214, 94, 0.24);
   border-radius: 12px;
-  background: rgba(168, 255, 79, 0.05);
-  color: #cfe6c4;
+  background: rgba(166, 214, 94, 0.05);
+  color: #e7eddc;
   font-size: 0.84rem;
 }
 
 .stats-note .icon {
   width: 16px;
   height: 16px;
-  color: var(--accent);
+  color: var(--accent-3);
 }
 
 .process {
@@ -1164,7 +1164,7 @@ textarea {
 
 .steps li:hover {
   transform: translateY(-3px);
-  border-color: rgba(168, 255, 79, 0.26);
+  border-color: rgba(255, 77, 77, 0.26);
 }
 
 .step-num {
@@ -1174,7 +1174,7 @@ textarea {
   width: 38px;
   height: 38px;
   margin-bottom: 18px;
-  border: 1px solid rgba(168, 255, 79, 0.3);
+  border: 1px solid rgba(255, 77, 77, 0.3);
   border-radius: 50%;
   color: var(--accent);
   font-family: var(--font-head);
@@ -1213,7 +1213,7 @@ textarea {
 
 .review:hover {
   transform: translateY(-3px);
-  border-color: rgba(168, 255, 79, 0.24);
+  border-color: rgba(255, 77, 77, 0.24);
 }
 
 .review-stars {
@@ -1229,7 +1229,7 @@ textarea {
 .review blockquote {
   flex: 1;
   margin: 0;
-  color: #dbe5dd;
+  color: #e9dfd4;
   font-size: 0.94rem;
   line-height: 1.68;
 }
@@ -1249,8 +1249,8 @@ textarea {
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #c6ff66, #2fe8b6);
-  color: #041309;
+  background: linear-gradient(135deg, #e8333f, #b51225);
+  color: #fff6ea;
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -1321,7 +1321,7 @@ textarea {
 }
 
 .faq-list details[open] .faq-icon {
-  background: rgba(168, 255, 79, 0.1);
+  background: rgba(255, 77, 77, 0.1);
   transform: rotate(45deg);
 }
 
@@ -1335,7 +1335,7 @@ textarea {
 
 .contact {
   border-top: 1px solid var(--line);
-  background: radial-gradient(760px 420px at 82% 18%, rgba(168, 255, 79, 0.06), transparent 70%);
+  background: radial-gradient(760px 420px at 82% 18%, rgba(255, 77, 77, 0.06), transparent 70%);
 }
 
 .contact-grid {
@@ -1374,7 +1374,7 @@ textarea {
 }
 
 .contact-lines a:hover {
-  border-color: rgba(168, 255, 79, 0.26);
+  border-color: rgba(255, 77, 77, 0.26);
   background: rgba(255, 255, 255, 0.045);
   transform: translateX(2px);
 }
@@ -1385,9 +1385,9 @@ textarea {
   flex: none;
   width: 40px;
   height: 40px;
-  border: 1px solid rgba(168, 255, 79, 0.15);
+  border: 1px solid rgba(255, 77, 77, 0.15);
   border-radius: 12px;
-  background: rgba(168, 255, 79, 0.07);
+  background: rgba(255, 77, 77, 0.07);
   color: var(--accent);
 }
 
@@ -1489,10 +1489,10 @@ textarea {
   align-items: center;
   gap: 7px;
   padding: 6px 10px;
-  border: 1px solid rgba(168, 255, 79, 0.2);
+  border: 1px solid rgba(166, 214, 94, 0.2);
   border-radius: 999px;
-  background: rgba(168, 255, 79, 0.07);
-  color: var(--accent);
+  background: rgba(166, 214, 94, 0.07);
+  color: var(--accent-3);
   font-size: 9px;
   font-weight: 700;
   letter-spacing: 0.11em;
@@ -1533,7 +1533,7 @@ textarea {
   border: 1px solid var(--line);
   border-radius: 12px;
   outline: none;
-  background: rgba(4, 8, 6, 0.5);
+  background: rgba(8, 4, 5, 0.5);
   color: var(--text);
   font-size: 0.91rem;
   transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
@@ -1541,15 +1541,15 @@ textarea {
 
 .repair-form input::placeholder,
 .repair-form textarea::placeholder {
-  color: #6d7972;
+  color: #776d66;
 }
 
 .repair-form input:focus,
 .repair-form select:focus,
 .repair-form textarea:focus {
-  border-color: rgba(168, 255, 79, 0.55);
-  background: rgba(4, 8, 6, 0.75);
-  box-shadow: 0 0 0 3px rgba(168, 255, 79, 0.1);
+  border-color: rgba(255, 77, 77, 0.55);
+  background: rgba(8, 4, 5, 0.75);
+  box-shadow: 0 0 0 3px rgba(255, 77, 77, 0.1);
 }
 
 .repair-form .field-error {
@@ -1581,7 +1581,7 @@ textarea {
 }
 
 .select-wrap select:invalid {
-  color: #6d7972;
+  color: #776d66;
 }
 
 .select-wrap option {
@@ -1600,7 +1600,7 @@ textarea {
 
 .form-note {
   margin-top: 12px;
-  color: #7e8a83;
+  color: #8f8279;
   font-size: 0.73rem;
   line-height: 1.55;
   text-align: center;
@@ -1647,7 +1647,7 @@ textarea {
   padding: 5px 9px;
   border: 1px solid var(--line);
   border-radius: 999px;
-  color: #c8d4cc;
+  color: #d4c9bf;
   font-size: 10px;
   font-weight: 500;
 }
@@ -1665,7 +1665,7 @@ textarea {
   font-weight: 600;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: #cbd6ce;
+  color: #dcd2c7;
 }
 
 .footer-col a {
@@ -1684,7 +1684,7 @@ textarea {
 .footer-hours {
   display: block;
   margin-top: 12px;
-  color: #7e8a83;
+  color: #8f8279;
   font-size: 0.8rem;
 }
 
@@ -1696,7 +1696,7 @@ textarea {
   margin-top: 46px;
   padding-top: 22px;
   border-top: 1px solid var(--line);
-  color: #76827b;
+  color: #857a72;
   font-size: 0.76rem;
 }
 
@@ -1799,7 +1799,7 @@ textarea {
     padding: 14px;
     border: 1px solid var(--line);
     border-radius: 18px;
-    background: rgba(9, 13, 11, 0.98);
+    background: rgba(16, 9, 10, 0.98);
     box-shadow: 0 36px 70px -20px rgba(0, 0, 0, 0.9);
     opacity: 0;
     visibility: hidden;
@@ -1892,7 +1892,7 @@ textarea {
     padding: 9px;
     border: 1px solid var(--line);
     border-radius: 999px;
-    background: rgba(7, 10, 8, 0.92);
+    background: rgba(12, 7, 8, 0.92);
     box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.9);
     backdrop-filter: blur(14px);
     transition: opacity 0.2s;
