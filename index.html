@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JTLB Repair Clinic — Console &amp; Controller Repair</title>
   <meta name="description" content="Specialist repair shop for PlayStation, Xbox, Nintendo Switch and controllers. Free diagnostics, honest quotes, 90-day warranty.">
-  <meta name="theme-color" content="#090607">
+  <meta name="theme-color" content="#0a0807">
   <script>document.documentElement.classList.add("js");</script>
   <meta property="og:title" content="JTLB Repair Clinic — Console &amp; Controller Repair">
   <meta property="og:description" content="From stick drift to HDMI ports — we bring your console back to life. Free diagnostics and a 90-day warranty.">
@@ -16,7 +16,7 @@
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@400;500;600;700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
   {
@@ -118,6 +118,14 @@
     <symbol id="i-plus" viewBox="0 0 24 24">
       <path d="M12 5v14M5 12h14"/>
     </symbol>
+    <symbol id="i-warning" viewBox="0 0 24 24">
+      <path d="M12 3.5 22 20.5H2L12 3.5Z"/>
+      <path d="M12 9v5M12 17.5h.01"/>
+    </symbol>
+    <symbol id="i-youtube" viewBox="0 0 24 24">
+      <rect x="2.5" y="5.5" width="19" height="13" rx="4"/>
+      <path d="m10 9.5 5 2.5-5 2.5v-5Z" fill="currentColor" stroke="none"/>
+    </symbol>
   </svg>
 
   <header class="site-header" id="top">
@@ -149,10 +157,11 @@
   <main id="main">
     <section class="hero">
       <div class="bg-grid" aria-hidden="true"></div>
+      <span class="hero-rail" aria-hidden="true">JTLB // Repair transmission 001</span>
       <div class="container hero-grid">
         <div class="hero-copy">
-          <a class="eyebrow" href="#contact"><span class="eyebrow-dot"></span> Free diagnostics · No fix, no fee</a>
-          <h1>Broken console?<br>We bring it <span class="accent">back to life.</span></h1>
+          <a class="eyebrow" href="#contact"><span class="eyebrow-dot"></span> Free diagnostics // No fix, no fee</a>
+          <h1>Broken console?<br>We bring it<br><span class="accent">back to life.</span></h1>
           <p class="lead">Specialist repairs for PlayStation, Xbox, Nintendo Switch and controllers — from stick drift to HDMI ports. Honest quotes, careful work, and a 90-day warranty.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#contact">Book a repair <svg class="icon"><use href="#i-arrow"/></svg></a>
@@ -163,16 +172,29 @@
             <li><svg class="icon"><use href="#i-check"/></svg> Same-day options</li>
             <li><svg class="icon"><use href="#i-check"/></svg> 90-day warranty</li>
           </ul>
+          <p class="hero-signoff"><span>Loot</span><i>//</i><span>Repair</span><i>//</i><span>Repeat</span></p>
         </div>
 
         <div class="hero-visual">
-          <div class="visual-glow" aria-hidden="true"></div>
+          <img class="hero-splatter" src="assets/splatter.svg" alt="" aria-hidden="true">
+          <svg class="hero-roundel" viewBox="0 0 160 160" aria-hidden="true" focusable="false">
+            <defs>
+              <path id="roundelPath" d="M80,80 m-57,0 a57,57 0 1,1 114,0 a57,57 0 1,1 -114,0"/>
+            </defs>
+            <circle cx="80" cy="80" r="76" fill="none" stroke="currentColor" stroke-width="1.4" stroke-dasharray="2 6"/>
+            <circle cx="80" cy="80" r="51" fill="none" stroke="currentColor" stroke-width="1.4"/>
+            <text class="roundel-ring">
+              <textPath href="#roundelPath" startOffset="0">LOOT · REPAIR · REPEAT · KEEP IT ALIVE · JTLB ·</textPath>
+            </text>
+            <text class="roundel-main" x="80" y="78" text-anchor="middle">JTLB</text>
+            <text class="roundel-sub" x="80" y="94" text-anchor="middle">BAY 04</text>
+          </svg>
 
           <article class="ticket">
             <div class="ticket-head">
               <div class="ticket-brand">
                 <img src="assets/icon.jpg" alt="" width="26" height="26">
-                <span>Job #1042</span>
+                <span>Job #1042 <em>// Bay 04</em></span>
               </div>
               <span class="status"><span class="pulse"></span> In progress</span>
             </div>
@@ -202,6 +224,11 @@
               <div class="ticket-foot-item"><span>Est. pickup</span><strong>Tomorrow · 2:00 pm</strong></div>
               <div class="ticket-badge"><svg class="icon"><use href="#i-shield"/></svg> Warranty</div>
             </div>
+
+            <div class="ticket-barcode" aria-hidden="true">
+              <span class="barcode-lines"></span>
+              <span class="barcode-code">JTLB-1042-05</span>
+            </div>
           </article>
 
           <div class="float-card float-rating">
@@ -224,24 +251,27 @@
     </section>
 
     <section class="brands" aria-label="Consoles and controllers we repair">
-      <div class="marquee">
-        <div class="marquee-track">
-          <span>PlayStation</span><i></i>
-          <span>Xbox</span><i></i>
-          <span>Nintendo Switch</span><i></i>
-          <span>Steam Deck</span><i></i>
-          <span>DualSense</span><i></i>
-          <span>Joy-Con</span><i></i>
-          <span>Game Boy</span><i></i>
-          <span>Retro consoles</span><i></i>
-          <span>PlayStation</span><i></i>
-          <span>Xbox</span><i></i>
-          <span>Nintendo Switch</span><i></i>
-          <span>Steam Deck</span><i></i>
-          <span>DualSense</span><i></i>
-          <span>Joy-Con</span><i></i>
-          <span>Game Boy</span><i></i>
-          <span>Retro consoles</span><i></i>
+      <div class="container brands-bar">
+        <span class="brands-tag"><svg class="icon"><use href="#i-warning"/></svg> Gear we service</span>
+        <div class="marquee">
+          <div class="marquee-track">
+            <span>PlayStation</span><i></i>
+            <span>Xbox</span><i></i>
+            <span>Nintendo Switch</span><i></i>
+            <span>Steam Deck</span><i></i>
+            <span>DualSense</span><i></i>
+            <span>Joy-Con</span><i></i>
+            <span>Game Boy</span><i></i>
+            <span>Retro consoles</span><i></i>
+            <span>PlayStation</span><i></i>
+            <span>Xbox</span><i></i>
+            <span>Nintendo Switch</span><i></i>
+            <span>Steam Deck</span><i></i>
+            <span>DualSense</span><i></i>
+            <span>Joy-Con</span><i></i>
+            <span>Game Boy</span><i></i>
+            <span>Retro consoles</span><i></i>
+          </div>
         </div>
       </div>
     </section>
@@ -249,7 +279,7 @@
     <section class="section" id="services">
       <div class="container">
         <div class="section-head reveal">
-          <span class="eyebrow"><span class="eyebrow-dot"></span> What we fix</span>
+          <span class="eyebrow"><span class="eyebrow-dot"></span> 01 // What we fix</span>
           <h2>Small shop. Serious repairs.</h2>
           <p>Consoles, controllers and handhelds — brought back to full health with the right parts and proper testing.</p>
         </div>
@@ -305,7 +335,7 @@
     <section class="section why" id="why">
       <div class="container why-grid">
         <div class="why-copy reveal">
-          <span class="eyebrow"><span class="eyebrow-dot"></span> Why JTLB</span>
+          <span class="eyebrow"><span class="eyebrow-dot"></span> 02 // Why JTLB</span>
           <h2>The difference is in the details.</h2>
           <p>No shortcuts, no mystery fees. Just careful diagnostics and repairs that hold up long after you've taken the console home.</p>
 
@@ -332,7 +362,7 @@
         <div class="stats reveal">
           <div class="stat">
             <strong>2,000<span>+</span></strong>
-            <p>Devices repaired</p>
+            <p>Devices revived</p>
           </div>
           <div class="stat">
             <strong>4.9<span>★</span></strong>
@@ -354,7 +384,7 @@
     <section class="section process" id="process">
       <div class="container">
         <div class="section-head center reveal">
-          <span class="eyebrow"><span class="eyebrow-dot"></span> How it works</span>
+          <span class="eyebrow"><span class="eyebrow-dot"></span> 03 // The protocol</span>
           <h2>From broken to playing in four steps.</h2>
         </div>
 
@@ -386,7 +416,7 @@
     <section class="section reviews" id="reviews">
       <div class="container">
         <div class="section-head reveal">
-          <span class="eyebrow"><span class="eyebrow-dot"></span> Word of mouth</span>
+          <span class="eyebrow"><span class="eyebrow-dot"></span> 04 // Field reports</span>
           <h2>Trusted by local gamers.</h2>
           <p>Most of our work comes from people telling their friends. Here's a taste of what they say.</p>
         </div>
@@ -422,7 +452,7 @@
     <section class="section faq" id="faq">
       <div class="container">
         <div class="section-head center reveal">
-          <span class="eyebrow"><span class="eyebrow-dot"></span> Good to know</span>
+          <span class="eyebrow"><span class="eyebrow-dot"></span> 05 // Good to know</span>
           <h2>Questions, answered.</h2>
         </div>
 
@@ -458,7 +488,7 @@
     <section class="section contact" id="contact">
       <div class="container contact-grid">
         <div class="contact-copy reveal">
-          <span class="eyebrow"><span class="eyebrow-dot"></span> Book a repair</span>
+          <span class="eyebrow"><span class="eyebrow-dot"></span> 06 // Open a channel</span>
           <h2>Tell us what's playing up.</h2>
           <p>Send a few details and we'll come back with next steps and a rough quote. You can also call or drop in during opening hours.</p>
 
@@ -489,7 +519,7 @@
 
         <form class="repair-form reveal" id="repairForm" novalidate>
           <div class="form-head">
-            <h3>Repair request</h3>
+            <h3>Open a repair ticket</h3>
             <span class="form-badge"><span class="pulse"></span> Free diagnosis</span>
           </div>
 
@@ -548,7 +578,11 @@
               <span class="brand-sub">Repair clinic</span>
             </span>
           </a>
-          <p>Console and controller repair specialists. Honest diagnostics, careful work, and a 90-day warranty on every repair.</p>
+          <p>The repair bench behind J The Last Boss. Console and controller specialists — honest diagnostics, careful work, and a 90-day warranty on every repair.</p>
+          <a class="footer-channel" href="https://www.youtube.com/@JTheLastBoss" target="_blank" rel="noopener">
+            <span class="footer-channel-icon"><svg class="icon"><use href="#i-youtube"/></svg></span>
+            <span><strong>Watch J The Last Boss</strong><small>Horror / retro / survival streams</small></span>
+          </a>
           <div class="footer-badges">
             <span><svg class="icon"><use href="#i-shield"/></svg> 90-day warranty</span>
             <span><svg class="icon"><use href="#i-check"/></svg> No fix, no fee</span>

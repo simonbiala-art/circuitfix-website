@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+  <defs>
+    <filter id="rough" x="-25%" y="-25%" width="150%" height="150%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.011 0.018" numOctaves="3" seed="11" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="30" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+  <g fill="#b5121b" filter="url(#rough)">
+    <ellipse cx="404" cy="396" rx="174" ry="118" transform="rotate(-13 404 396)"/>
+    <ellipse cx="304" cy="322" rx="92" ry="64" transform="rotate(17 304 322)"/>
+    <ellipse cx="514" cy="474" rx="126" ry="68" transform="rotate(-24 514 474)"/>
+    <ellipse cx="214" cy="490" rx="44" ry="18" transform="rotate(28 214 490)"/>
+    <ellipse cx="588" cy="302" rx="34" ry="14" transform="rotate(-36 588 302)"/>
+    <ellipse cx="424" cy="584" rx="18" ry="45" transform="rotate(9 424 584)"/>
+    <ellipse cx="326" cy="216" rx="13" ry="34" transform="rotate(-17 326 216)"/>
+    <circle cx="166" cy="258" r="19"/>
+    <circle cx="236" cy="198" r="9"/>
+    <circle cx="662" cy="392" r="15"/>
+    <circle cx="610" cy="552" r="8"/>
+    <circle cx="346" cy="620" r="11"/>
+    <circle cx="554" cy="206" r="6"/>
+    <circle cx="268" cy="576" r="6"/>
+    <circle cx="476" cy="152" r="4"/>
+    <circle cx="694" cy="246" r="5"/>
+    <circle cx="128" cy="392" r="5"/>
+  </g>
+</svg>
