@@ -113,7 +113,7 @@ if (repairForm) {
     }
 
     const lines = [
-      "Hi JTLB Repair Clinic, I'd like to book a repair.",
+      "Hi J The Last Boss Repair Clinic, I'd like to book a repair.",
       "",
       `Name: ${nameInput.value.trim()}`,
       `Contact: ${contactInput.value.trim()}`,
